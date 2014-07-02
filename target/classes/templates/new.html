@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Spring Data</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form action="/users/create" th:object="${user}" method="post">
+		<label for="first_name">First Name:</label>
+		<input id="first_name" type="text" th:field="*{firstName}" /> <br />
+		<p data-th-text="${firstName}"></p>
+		
+		<label for="last_name">Last Name:</label>
+		<input id="last_name" type="text" th:field="*{lastName}" /> <br />
+		<p data-th-text="${lastName}"></p>
+		
+		<label for="email">Email:</label>
+		<input id="email" type="text" th:field="*{email}" /> <br />
+		<p data-th-text="${email}"></p>
+	
+		<input type="submit" value="Register" />
+	</form>
+</body>
+</html>
